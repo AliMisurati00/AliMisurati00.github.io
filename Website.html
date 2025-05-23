@@ -4,41 +4,63 @@
     <meta charset="UTF-8">
     <title>AM2000</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .top-pagebreak .pagebreak-img {
+            max-width: 20%; /* Size for the top page break */
+        }
+
+        .ali-pagebreak .pagebreak-img {
+            max-width: 5%; /* Size for the ALI section page break */
+        }
+    </style>
 </head>
 <body>
     <div class="title-bar">
         AM2000
     </div>
     <div class="nav-bar">
-        <a href="index.html" class="nav-btn">HOME</a>
-        <a href="bio.html" class="nav-btn">BIO</a>
-        <a href="portfolio.html" class="nav-btn">PORTFOLIO</a>
+        <a href="#" class="nav-btn">HOME</a>
+        <a href="#home-section" class="nav-btn">BIO</a>
+        <a href="#bio-section" class="nav-btn">PORTFOLIO</a>
     </div>
-    <div class="center-message">
+    <div class="center-message" id="home-section">
         <img src="Picture 1.jpg" alt="Motivational" class="center-image">
         <br>
         Click <a href="https://www.youtube.com/watch?v=2tOutF8B3f8" target="_blank" class="here-link">here</a> to change your life.
     </div>
-    <div class="bio-section">
+    <div class="bio-section" id="bio-section">
+        <div class="new-image-section">
+            <img src="Picture 3.jpg" alt="New Section Image" class="new-section-img">
+        </div>
         <p>
             ALI. BORN 2000. PAINTER PHOTOGRAPHER DESIGNER. WORK PROCESS IS SYSTEMATIC. OUTPUT IS VISUAL. EMOTION IS IRRELEVANT. PURPOSE IS CREATION.
         </p>
-        <div class="split-section">
-            <div class="split-left">
-                <img src="Picture 2.jpg" alt="Coursework Example" class="coursework-image">
+        <div class="new-image-section">
+            <img src="Picture 3.jpg" alt="New Section Image" class="new-section-img">
+        </div>
+    </div>
+    <div class="split-section" id="coursework-section">
+        <div class="split-left">
+            <div class="image-page-break">
+                <img src="Picture 3.jpg" alt="Page Break" class="pagebreak-img">
             </div>
-            <div class="split-right">
-                <p>
-                    As part of our design coursework, we were tasked with creating a magazine cover using Adobe InDesign. The objective was to explore layout design, typographic hierarchy, and visual storytelling, all crucial skills in editorial design. This assignment encouraged us to express our individual aesthetic preferences while learning how to translate conceptual ideas into polished visual compositions.
-                    <br><br>
-                    For my cover, I created an edition of a fictional magazine titled GRAIN, themed around urban street culture. The issue, dated October 2024, is anchored by the cover story “Through the Concrete Lens”, which focuses on capturing authentic street life. Another featured article, “Street Art: The Urban Canvas”, highlights the creativity and social commentary embedded in urban graffiti and murals.
-                    <br><br>
-                    The design features a minimalist yet bold layout, with the typography and imagery working together to evoke the raw, dynamic energy of the streets. I chose a subdued, grayscale palette with contrasting highlights to draw attention to key text elements, lending the cover a gritty, documentary-style feel. The intent was to reflect the unfiltered realism of city life while maintaining a clean, editorial aesthetic.
-                    <br><br>
-                    This project not only enhanced my technical proficiency with InDesign but also deepened my understanding of how to communicate mood and narrative through graphic design.
-                </p>
+            <img src="Picture 2.jpg" alt="Coursework Example" class="coursework-image">
+        </div>
+        <div class="split-right">
+            <div class="coursework-text">
+                As part of our design coursework, we were tasked with creating a magazine cover using Adobe InDesign, a powerful desktop publishing software widely used in the graphic design industry. The objective was to explore layout design, typographic hierarchy, and visual storytelling all crucial skills in editorial design. This assignment encouraged us to express our individual aesthetic preferences while learning how to translate conceptual ideas into polished visual compositions.
+                <br><br>
+                For my cover, I created an edition of a fictional magazine titled GRAIN, themed around urban street culture. The issue, dated October 2024, is anchored by the cover story “Through the Concrete Lens”, which focuses on capturing authentic street life. Another featured article, “Street Art: The Urban Canvas”, highlights the creativity and social commentary embedded in urban graffiti and murals.
+                <br><br>
+                The design features a minimalist yet bold layout, with the typography and imagery working together to evoke the raw, dynamic energy of the streets. I chose a subdued, grayscale palette with contrasting highlights to draw attention to key text elements, lending the cover a gritty, documentary-style feel. The intent was to reflect the unfiltered realism of city life while maintaining a clean, editorial aesthetic.
+                <br><br>
+                This project not only enhanced my technical proficiency with InDesign but also deepened my understanding of how to communicate mood and narrative through graphic design.
             </div>
         </div>
     </div>
+    <!-- Place this just before the closing </body> tag -->
+    <footer class="footer-bar">
+        &copy; 2025 Ali Misurati. All rights reserved.
+    </footer>
 </body>
 </html>
