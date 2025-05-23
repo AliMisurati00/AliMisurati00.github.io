@@ -145,4 +145,7 @@ body {
     text-align: left;
     display: flex;
     align-items: center;
+    height: 100%; /* Make the text container match the image height */
+    max-width: 1050px; /* Match the image width */
+    overflow: auto;    /* Add scroll if text overflows */
 }
