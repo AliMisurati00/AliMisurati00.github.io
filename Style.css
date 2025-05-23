@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    padding: 0; /* Remove top padding so bar is flush with top */
+    padding-top: 142px;   /* Adjust to fit both fixed bars */
     overflow-x: hidden;
 }
 
@@ -9,11 +9,12 @@ body {
     background-color: #000000;
     color: #fff;
     padding: 40px 0 32px 0;
-    font-size: 3.2rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3.2rem; /* Reverted from 4.5rem to original size */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold;
     letter-spacing: 2px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    position: sticky;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25), 0 2px 8px rgba(0,0,0,0.08);
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
@@ -29,11 +30,11 @@ body {
     align-items: center;
     padding: 0;
     height: 38px;
-    box-shadow: 0 1px 2px rgb(255, 255, 255);
-    position: sticky;
-    top: 0;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18), 0 1px 2px rgba(0,0,0,0.10);
+    position: fixed;
+    top: 104px; /* Place directly under the title bar */
     left: 0;
-    z-index: 999;
+    z-index: 1001;
 }
 
 .nav-btn {
@@ -80,7 +81,7 @@ body {
 }
 
 .center-image {
-    max-width: 242px; /* 10% larger than 220px */
+    max-width: 363px; /* 242px + 50% = 363px */
     height: auto;
     display: block;
     margin: 0 auto 24px auto;
@@ -117,35 +118,104 @@ body {
 }
 
 .coursework-image {
-    max-width: 250%;
-    width: 1050px;
+    width: 100%;
+    max-width: 680px; /* 560px + 70% of 560px = 952px, but 680px is a practical large size */
     height: auto;
     object-fit: cover;
     border-radius: 8px;
-    /* Enhanced drop shadow */
     box-shadow: 0 8px 32px rgba(0,0,0,0.25), 0 2px 8px rgba(0,0,0,0.08);
+    margin-right: 24px; /* Add space on the right so image doesn't touch the border */
 }
 
 .split-section {
     display: flex;
-    justify-content: center;
     align-items: flex-start;
     gap: 48px;
-    margin-top: 64px;
+    margin-top: 180px; /* Space above */
+    margin-bottom: 100px; /* Add more space below image and text */
+    width: 100%;
 }
 
 .split-left {
-    flex: 1;
+    flex: 0 0 680px; /* Match the new max-width of the image */
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    padding-left: 32px;
+    box-sizing: border-box;
 }
 
 .split-right {
     flex: 1;
     text-align: left;
     display: flex;
-    align-items: center;
-    height: 100%; /* Make the text container match the image height */
-    max-width: 1050px; /* Match the image width */
-    overflow: auto;    /* Add scroll if text overflows */
+    align-items: stretch;
+    width: 100%;
+    max-width: none;
+    overflow: visible;
+}
+
+.image-page-break {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 60px 0;
+}
+
+.pagebreak-img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    opacity: 1;
+    border-radius: 8px;
+}
+
+.new-image-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 32px 0;
+}
+
+.new-section-img {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.text-box {
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 24px;
+    font-size: 1.1rem;
+    color: #222;
+    width: 100%; /* Fill the right side */
+    box-sizing: border-box;
+}
+
+.coursework-text {
+    width: 100%;
+    box-sizing: border-box;
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 24px;
+    font-size: 1.1rem;
+    color: #222;
+    line-height: 1.6;
+    font-family: Arial, Helvetica, sans-serif; /* Set font to Arial */
+}
+
+.footer-bar {
+    width: 100vw;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 24px 0 20px 0;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    position: ;
+    left: 0;
+    bottom: 0;
+    z-index: 1001;
 }
